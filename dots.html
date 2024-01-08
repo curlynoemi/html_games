@@ -14,8 +14,8 @@
       background: #111
     }
     .wall {
-      width: 400px;
-      height: 400px;
+      width: 450px;
+      height: 450px;
       position: absolute;
       margin: auto;
       top: 0;
@@ -24,8 +24,8 @@
       right: 0;
     }
     .wall .dot {
-      height: 16.66%;
-      width: 16.66%;
+      height: 16%;
+      width: 16%;
       background: #2c2c2c;
       border-radius: 50%;
       float: left;
@@ -37,8 +37,16 @@
     p {
       color: #888;
       text-align: center;
-      padding: 60px;
+      padding: 75px;
       font-family: Poppins;
+      font-size: 24px
+    }
+    @media screen and (max-width: 600px) {
+      .wall {width: 600px;}
+      .wall .dot {
+        height: 25%;
+      width: 25%;
+      }
     }
   </style>
 </head>
