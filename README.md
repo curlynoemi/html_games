@@ -3,6 +3,11 @@ Collection of small mini games with minimalistic aesthetic that can be played of
 <br>
 They can be also put on a QR code or NFT tag.
 
+## 🎮 Demo Play
+Try the games online in your browser.
+- [Snake](https://curlynoemi.github.io/html_games/snake.html)
+- [Dots](https://curlynoemi.github.io/html_games/dots.html)
+
 ## 💝 Credits
 All games redesigned by [me](https://github.com/curlynoemi) and created by:
 <br>
