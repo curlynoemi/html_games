@@ -6,49 +6,63 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-    * {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      height: 100%;
-      background: #111
-    }
-    .wall {
-      width: 450px;
-      height: 450px;
-      position: absolute;
-      margin: auto;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-    }
-    .wall .dot {
-      height: 16%;
-      width: 16%;
-      background: #2c2c2c;
-      border-radius: 50%;
-      float: left;
-    }
-    .wall .dot.active {
-      background: #555;
-      cursor: pointer;
-    }
-    p {
-      color: #888;
-      text-align: center;
-      padding: 75px;
-      font-family: Poppins;
-      font-size: 24px
-    }
-    @media screen and (min-width: 700px) {
-      .wall {width: 600px;}
-      .wall .dot {
-        height: 40%;
-        width: 40%;
-      }
-      p {font-size: 60%}
-    }
+    @viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #111;
+}
+
+.wall {
+  width: 90vw;
+  height: 90vw;
+  max-width: 450px;
+  max-height: 450px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.wall .dot {
+  height: 16.66%;
+  width: 16.66%;
+  background: #2c2c2c;
+  border-radius: 50%;
+  float: left;
+}
+
+.wall .dot.active {
+  background: #555;
+  cursor: pointer;
+}
+
+p {
+  color: #888;
+  text-align: center;
+  padding: 75px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 700px) {
+  .wall .dot {
+    height: 16%;
+    width: 16%;
+  }
+  p {
+    font-size: 140%;
+    padding: 40px;
+  }
+}
   </style>
 </head>
 <body>
