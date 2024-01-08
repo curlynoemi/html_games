@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>dots</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      height: 100%;
+      background: #111
+    }
+    .wall {
+      width: 400px;
+      height: 400px;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+    .wall .dot {
+      height: 16.66%;
+      width: 16.66%;
+      background: #2c2c2c;
+      border-radius: 50%;
+      float: left;
+    }
+    .wall .dot.active {
+      background: #555;
+      cursor: pointer;
+    }
+    p {
+      color: #888;
+      text-align: center;
+      padding: 60px;
+      font-family: Poppins;
+    }
+  </style>
+</head>
+<body>
+  <p>You caught <span id="dotCounter">0</span> dots</p>
+  <div class='wall'>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+    <div class='dot'></div>
+  </div>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="./script.js"></script>
+</body>
+<script>
+  $(document).ready(function () {
+    $(document).on("click", ".dot.active", function () {
+      App.add_point();
+    });
+    App.set_dot();
+  });
+  App = {
+    dot_selector: ".wall .dot",
+    counter: 0,
+    set_dot: function () {
+      $(this.dot_selector).removeClass("active");
+      var active = Math.floor((Math.random() * ($(this.dot_selector).length - 1)) + 1);
+      $(this.dot_selector + ":eq(" + active + ")").addClass("active");
+    },
+    add_point: function () {
+      this.counter++;
+      $("#dotCounter").text(this.counter);
+      this.set_dot();
+    },
+  };
+</script>
+</html>
