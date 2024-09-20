@@ -1,7 +1,5 @@
 # 🕹️ Small HTML Games
-Collection of small mini games with minimalistic aesthetic that can be played offline.
-<br>
-They can be also put on a QR code or NFT tag.
+Collection of small mini games with minimalistic aesthetic.
 
 ## 🎮 Demo Play
 Try the games online in your browser.
